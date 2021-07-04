@@ -1,0 +1,603 @@
+﻿    /* ОБЩИЕ СТИЛЕВЫЕ КЛАССЫ */
+
+*, *:after, *:before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   transition: .2s ease-in-out; /* плавность переходов для всех элементов страницы*/
+}
+
+   /* СТИЛИ ДЛЯ СПИСКА МЕНЮ */
+
+ul {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+   outline: none;
+}
+
+   /* СТИЛЬ ДЛЯ ТЕЛА СТРАНИЦЫ */
+
+body {
+   font-family: 'Open Sans', arial, sans-serif;
+   font-size: 14px;
+   line-height: 1;
+   color: #373737;
+   background: 	none;
+}
+
+   /* ОЧИСТКА ПОТОКОВ ДЛЯ ВСЕХ КОНТЕЙНЕРОВ, внутри которых задано обтекание дочерних элементов */
+
+header:after, .container:after, footer:after, main:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+   /* СТИЛЕВОЙ КЛАСС, который управляет шириной контейнера сетки */
+
+.container {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 960px;
+  /* padding: 0 5px;*/
+}
+
+
+
+
+   /* СТИЛЬ ДЛЯ ШАПКИ СТРАНИЦЫ */
+
+header {
+   position: absolute;
+   width: 100%;
+   background: none;
+/*   padding: 15px 0;*/
+/*   margin-bottom: 30px;*/
+/*   position: relative;*/
+    z-index: 3;
+}
+
+
+   /* СТИЛИ ДЛЯ МЕНЮ СТРАНИЦЫ */
+
+#menu {
+   float: right;
+  
+}
+#menu li {
+   display: inline-block;
+   margin-right: 30px;
+}
+#menu a {
+   color: #111;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 600;
+   display: block;
+   line-height: 40px;
+}
+
+#menu a:hover {
+   color: #008000;
+   font-size: 140%;
+   font-weight:bold;
+   text-shadow: 1px 1px #AAA;
+}
+
+#menu li:last-child {
+   margin-right: 0;
+}
+
+   /* СТИЛЬ ДЛЯ ПУНКТА МЕНЮ ТЕКУЩЕЙ СТРАНИЦЫ */
+
+#current { 
+   font-size: 140%;
+   font-weight:bold;
+   
+}
+
+
+   /* СТИЛИ ГЛАВНОЙ ЧАСТИ ТЕЛА СТРАНИЦЫ */
+
+main {
+/*   padding: 5px 0;*/
+   background: none;
+   color: black;
+}
+
+   /* СТИЛИ ДЛЯ ВИДЕО */
+
+.wrapper {
+  position: relative;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 960px;
+    max-height: 960px;
+    width: 100%;
+    height: 100%; 
+    z-index: 1;
+    background: url(img/Olen.png) no-repeat; 
+    /*background-size:contain;*/
+    background-size:cover;
+}
+
+
+   /* СТИЛИ НАДПИСИ ЛЕСНОЕ */
+
+.lesnoye {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    max-width: 960px;
+    max-height: 960px;
+    width: 100%;
+    height: auto; 
+    z-index: 2;
+   
+   animation-duration: 1s;
+   @-webkit-animation-duration: 1s;
+   @-moz-animation-duration: 1s;
+   @-o-animation-duration: 1s;
+
+   transform: translateY (-50%);
+   @-webkit-transform: translateY (-50%);
+   @-moz-transform: translateY (-50%);
+   @-o-transform: translateY (-50%);
+
+   animation-name: Poyavlenie;
+   @-webkit-animation-name: Poyavlenie;
+   @-moz-animation-name: Poyavlenie;
+   @-o-animation-name: Poyavlenie;
+ 
+   animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+   @-webkit-animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+   @-moz-animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+   @-o-animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+  }
+
+   /* АНИМАЦИЯ НАДПИСИ ЛЕСНОЕ */
+
+@-webkit-keyframes Poyavlenie {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-o-keyframes Poyavlenie {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-moz-keyframes Poyavlenie {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@keyframes Poyavlenie {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+   /* СТИЛИ НАДПИСИ 5000 */
+
+.cena {
+    position: absolute;
+    top: 98%;
+    left:13%;
+    max-width: 960px;
+    max-height: 960px;
+    width: 100%;
+    height: auto; 
+    z-index: 2;
+
+   animation-duration: 6s;
+   @-webkit-animation-duration: 6s;
+   @-moz-animation-duration: 6s;
+   @-o-animation-duration: 6s;
+
+   transform: translateY (-50%);
+   @-webkit-transform: translateY (-50%);
+   @-moz-transform: translateY (-50%);
+   @-o-transform: translateY (-50%);
+
+   animation-name: Poyavlenie;
+   @-webkit-animation-name: Poyavlenie;
+   @-moz-animation-name: Poyavlenie;
+   @-o-animation-name: Poyavlenie;
+ 
+   animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+   @-webkit-animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+   @-moz-animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+   @-o-animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+}
+
+   /*АНИМАЦИЯ НАДПИСИ 5000*/
+
+@-webkit-keyframes Poyavlenie {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-o-keyframes Poyavlenie {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@-moz-keyframes Poyavlenie {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+@keyframes Poyavlenie {
+   0% {opacity:0;}
+   100% {opacity:1;}
+}
+
+
+   /* СТИЛИ ПАНЕЛИ БРОНИ */
+
+.img-bron {
+    position: absolute;
+    top: 75%;
+    left: 28%;
+    max-width: 960px;
+    max-height: 960px;
+    width: 100%;
+    height: auto; 
+    z-index: 2;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 14px;
+    
+}
+
+#img-bron {
+    position: absolute;
+    top: 73%;
+    left: 28%;
+    max-width: 398px;
+    width: 100%;
+    height: auto; 
+    z-index: 2;
+  
+}
+
+   /* СТИЛИ КНОПОК ПАНЕЛИ БРОНИ*/
+
+#button_gosti {
+    background-color: white; 
+    border: 1px solid gray;
+    color: black;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+#button_naiti {
+    background-color: #008000; 
+    border: 1px solid gray;
+    color: black;
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+
+   /* СТИЛИ ОБЛАКОВ */
+
+.cloud {
+    overflow: hidden;
+    top: 50%;
+    position: absolute;
+    width:100%;
+    height: 0;
+    padding-bottom:33%;
+    background:	none;
+    z-index: 2;
+}
+
+.cloud img {
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    -webkit-user-select: none; 
+    -moz-user-select: none;   
+    -ms-user-select: none;
+    user-select: none;    
+    pointer-events: none;
+}
+
+   /*АНИМАЦИЯ ОБЛАКОВ*/
+
+@-webkit-keyframes animCloud {
+    from {
+        -webkit-transform: translateX(100%)
+    }
+    to {
+        -webkit-transform: translateX(-100%)
+    }
+}
+@-moz-keyframes animCloud {
+    from {
+        -moz-transform: translateX(100%)
+    }
+    to {
+        -moz-transform: translateX(-100%)
+    }
+}
+@keyframes animCloud {
+    from {
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%)
+    }
+    to {
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%)
+    }
+}
+.cloud1 {
+    -webkit-animation: animCloud 20s infinite linear;
+    -moz-animation: animCloud 20s infinite linear;
+    animation: animCloud 20s infinite linear
+}
+.cloud2 {
+    -webkit-animation: animCloud 40s infinite linear;
+    -moz-animation: animCloud 40s infinite linear;
+    animation: animCloud 40s infinite linear
+}
+.cloud3 {
+    -webkit-animation: animCloud 60s infinite linear;
+    -moz-animation: animCloud 60s infinite linear;
+    animation: animCloud 60s infinite linear
+}
+.cloud4 {
+    -webkit-animation: animCloud 80s infinite linear;
+    -moz-animation: animCloud 80s infinite linear;
+    animation: animCloud 80s infinite linear
+}
+
+
+   /*КНОПКА ПЕРЕКЛЮЧЕНИЯ МЕНЮ, появляющаяся при ширине 768px*/
+
+.nav-toggle {
+   display: none;
+   position: relative;
+   float: right;
+   width: 40px;
+   height: 40px;
+   margin-left: 20px;
+   background: #696969;
+   cursor: pointer;
+   z-index: 5;    
+}
+.nav-toggle span {
+   display: block;
+   position: absolute;
+   top: 19px;
+   left: 8px;
+   right: 8px;
+   height: 2px;
+   background: white;
+}
+.nav-toggle span:before, .nav-toggle span:after {
+   content: "";
+   position: absolute;
+   display: block;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background: white; 
+}
+.nav-toggle span:before {
+   top: -10px;
+}
+.nav-toggle span:after {
+   bottom: -10px;
+}
+/* СТИЛЕВОЙ КЛАСС СКРЫТОГО МЕНЮ, которое будет добавлен в верхнему меню при нажатии на кнопку*/
+
+#menu.active {
+   max-height: 200px;
+}
+
+    /* СТИЛИ, СОСТАВЛЯЮЩИЕ И ДЕКОРАТИВНЫЕ ЭФФЕКТЫ ПОДВАЛА СТРАНИЦЫ*/
+
+
+footer {
+/*   padding: 5px 0;*/
+   background: none;
+   color: black;
+   z-index: 2;
+}
+.footer-col {
+   width: 33%;
+   float: left;
+}
+.footer-col a {
+   color: black;
+}
+
+.footer-col a:hover {
+   color: #008000;
+   font-size: 120%;
+   font-weight:bold;
+   text-shadow: 1px 1px #AAA;
+ 
+}
+
+.footer-col:last-child {
+   text-align: right;
+}
+.social-bar-wrap {
+   text-align: center;
+}
+.social-bar-wrap a {
+   padding: 0 7px;
+   font-size: 18px;
+}
+
+/* СТИЛИ БЛОКА МЕРОПРЯТИЙ СТРАНИЦЫ МЕРОПРИЯТИЯ */
+
+.events {
+    position: absolute;
+    top: 10%;
+    left:55%;
+    max-width: 960px;
+    max-height: 960px;
+    width: 100%;
+    height: auto; 
+    font-size: 30px;
+    color: #008000;
+    text-shadow: 1px 1px #AAA;
+    z-index: 2;
+}
+
+.events a {
+   color: #008000;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 600;
+   display: block;
+   line-height: 40px;
+}
+
+.events a:hover {
+   color: black;
+   font-size: 120%;
+   font-weight:bold;
+   text-shadow: 1px 1px #AAA;
+}
+
+#spisok {
+
+ position: absolute;
+    top: 25%;
+    left:55%;
+    max-width: 960px;
+    max-height: 960px;
+    width: 100%;
+    height: auto; 
+    font-size: 40px;
+    color: #008000;
+    text-shadow: 1px 1px #AAA;
+    z-index: 2;
+}
+
+.shrift {
+  font-size: 0.5em;
+  color: black;
+}
+
+    /*МЕДИА-ЗАПРОСЫ при изменении экрана при ширине 768px */
+
+   @media (max-width: 768px) {
+  
+  /* показываем кнопку для переключения верхней навигации */
+   .nav-toggle {
+      display: block;
+}
+
+   /* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив его влево на ширину появившейся кнопки  */
+   #menu {
+      max-height: 0;
+      background: #696969; 
+      float: none;
+      position: absolute;
+      overflow: hidden;
+      top: 63px;
+      right: 0;
+      left:60%;
+      margin: 0;
+      padding: 0;
+      z-index: 3;  
+}  
+
+   /* делаем элементы списка блочными, чтобы они располагались друг под другом */
+   #menu li {
+      display: block;
+      text-align: center;
+      border-bottom: 1px solid black; 
+      margin-right: 0;
+}
+
+   /* меняем цвет шрифта меню */
+   #menu a {
+   color: white;
+} 
+
+   /* позиционируем скрытое под кнопку меню слева от кнопки */
+
+    #menu {
+      top: 5px;
+      right: 40px;
+}
+
+ 
+   /*скрываем панель Брони при 768*/
+.img-bron {
+    display: none;
+    
+}
+
+#img-bron {
+    position: absolute;
+    top: 75%;
+    left: 28%;
+    max-width: 398px;
+    width: 100%;
+    height: auto; 
+    z-index: 2;
+  
+}
+
+   /* убираем верхнюю и нижнюю границы и выравниваем кнопку по центру */
+   .post-footer {
+      border-top: none;
+      border-bottom: none;
+      text-align: center;
+}
+
+   /* отменяем позиционирование кнопок соцсетей */
+   .post-social {
+      position: static;
+      text-align: center;
+      transform: none;
+      margin-top: 20px;
+}
+   
+   /* отменяем обтекание для столбцов подвала страницы */
+   .footer-col {
+      float: none;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+}
+   .footer-col:last-child {
+      text-align: center;
+      margin-bottom: 0;
+}
+
+
+   /* меняем размер шрифта страницы МЕРОПРИЯТИЯ */
+
+.events {
+    font-size: 20px;
+}
+
+ /* меняем размер шрифта страниц СВАДЬБЫ, БАНКЕТЫ... */
+
+
+#spisok {
+    font-size: 20px;
+}
+
+}
